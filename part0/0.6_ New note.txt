@@ -1,0 +1,13 @@
+title 0.6: New note
+
+browser->server:
+note over browser:
+pressing save button runs js function in browser
+preventDefault() prevents POST request when save button is pressed
+note initialized as variable with content of text box and date
+note pushed to notes array
+redrawNotes() called to redraw the notes list
+sendToServer() called to send note to the server
+end note
+browser->server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server->browser: {"message":"note created"}

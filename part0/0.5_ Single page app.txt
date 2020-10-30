@@ -1,0 +1,18 @@
+title 0.5: Single page app
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server->browser: HTML content
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server->browser: spa.js
+note left of browser:
+browser executes spa.js
+line 31 of spa.js calls GET request
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server->browser: [{content: "", date: "2020-10-30T12:27:57.661Z"},...]
+note left of browser:
+event listener calls redrawNotes()
+notes are redrawn from JSON
+end note
